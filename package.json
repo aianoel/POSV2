@@ -1,0 +1,49 @@
+{
+  "name": "pos-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "node prisma/seed.js",
+    "cap:sync": "cap sync",
+    "cap:android": "cap add android",
+    "cap:open": "cap open android",
+    "static-build": "node static-build.js",
+    "cap:build": "npm run static-build && npm run cap:sync && npm run cap:open"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.1.0",
+    "@capacitor/cli": "^7.1.0",
+    "@capacitor/core": "^7.1.0",
+    "@capacitor/preferences": "^7.0.0",
+    "@heroicons/react": "^2.2.0",
+    "@prisma/client": "^6.5.0",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "next": "^14.2.26",
+    "prisma": "^6.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.5.2",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^20.17.28",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.26",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
